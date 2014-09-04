@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PeekATime</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div class="navigation">
+		<div class="nav-items">
+			<ul>
+				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "Create New Event", new_event_path %></li>
+			</ul>
+		</div>
+		<div class="peek-a-time">
+			<div id="logo-text">PEEK-A-TIME</div>
+		</div>
+		<div class="production">
+			<div id="prod-text">...an Alexander Frankel production.</div>
+		</div>
+	</div>
+
+<div class="app-container">
+	<%= yield %>
+</div>
+
+</body>
+</html>

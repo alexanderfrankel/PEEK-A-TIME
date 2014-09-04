@@ -1,0 +1,25 @@
+<%= form_for(@event) do |f| %>
+	<p>
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+	</p>
+
+	<p>
+		<%= f.label :location%><br>
+		<%= f.text_field :location %>
+	</p>
+
+	<p>
+		<%= f.label :start_range, "Date Range Start" %><br>
+		<%= f.text_field :start_range %>
+	</p>
+
+	<p>
+		<%= f.label :end_range, "Date Range End" %><br>
+		<%= f.text_field :end_range %>
+	</p>
+
+	<%= f.submit class:"btn btn-danger" %>
+
+<% end %>
+

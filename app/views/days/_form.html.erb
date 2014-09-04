@@ -1,0 +1,13 @@
+<%= form_for [:event, @day] do |f| %>
+	<p>
+		<%= f.label :start_day, "Start Date" %><br>
+		<%= f.text_field :start_day %>
+	</p>
+
+	<p>
+		<%= f.label :end_day, "End Date" %><br>
+		<%= f.text_field :end_day %>
+	</p>
+
+	<%= f.submit "Create", class:"btn btn-danger" %>
+<% end %>

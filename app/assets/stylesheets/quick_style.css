@@ -1,0 +1,104 @@
+li {
+	list-style: none;
+}
+
+th {
+	text-align: center;
+}
+
+.navigation {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: blue;
+	height: 80px;
+}
+
+.nav-items {
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+
+.navigation ul {
+	list-style: none;
+	margin-top: 45px;
+}
+
+.navigation ul li {
+	border: 1px solid white;
+	border-radius: 5px;
+	margin: 0 5px;
+	padding: 2px 4px;
+	display: inline;
+}
+
+
+.navigation ul li:hover {
+	background: red;
+}
+
+.navigation ul li a {
+	color: white;
+	text-decoration: none;
+}
+
+.peek-a-time {
+	height: 100%;
+	float: left;
+	width: 60%;
+	text-align: center;
+	font-size: 52px;
+	color: red;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
+#logo-text {
+	margin-top: 10px;
+}
+
+.production {
+	float: left;
+	width: 20%;
+	color: white;
+	font-family: Papyrus, fantasy;
+	text-align: center;
+}
+
+#prod-text {
+	margin-top: 45px;
+}
+
+.app-container {
+	margin: 0 auto;
+	padding-top: 80px;
+	width: 80%;
+	text-align: center;
+}
+
+.event-list {
+	margin: 0;
+	padding: 0;
+}
+
+.events {
+	border-radius: 6px;
+	background: #FF3366;
+	margin-top: 20px;
+	padding: 10px 0;
+	font-size: 30px;
+}
+
+.events:hover {
+	background: #330066;
+}
+
+.event-list a{
+	color: white;
+	text-decoration: none;
+}
+
+.hidden {
+	display: hidden;
+}

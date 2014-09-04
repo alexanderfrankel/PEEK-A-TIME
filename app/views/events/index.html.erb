@@ -1,0 +1,7 @@
+<h2>Select an event or create a new one!</h2>
+
+<ul class="event-list">
+	<% @events.each do |event| %>
+		<a href="/events/<%= event.id %>"><li class="events"><%= event.title %></li></a>
+	<% end %>
+</ul>

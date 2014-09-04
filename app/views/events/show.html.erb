@@ -1,0 +1,44 @@
+<h2><%= @event.title %><br></h2>
+<h4>
+	Possible Date Range: <%= @event.start_range %> -- <%= @event.end_range %><br>
+</h4>
+
+<p>Look at the proposed dates below and take a vote (either up or down).<br>
+	If you do not see a date that works for you or would like to request a new date proposal, click the "Add Date" link.<br>
+	<strong>Please only add dates within the range listed above!</strong><br>
+	At the end of the voting period, the dates with the highest number of votes will be chosen.<br>
+	Thank you for playing and remember <strong>please only vote once for each set of dates!!</strong>
+</p><br>
+
+<strong>Proposed Dates:</strong><br>
+<%= link_to "Add Date", new_event_day_path(@event), class:"btn btn-info" %><br>
+
+<ol>
+
+</ol>
+
+<table class="table">
+
+	<thead>
+		<tr>
+			<th>Start Date</th>
+			<th>End Date</th>
+			<th>Vote Up</th>
+			<th>Vote Down</th>
+			<th>Total Votes</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @days.each do |day| %>
+			<tr>
+				<td><%= day.start_day %></td>
+				<td><%= day.end_day %></td>
+				<td><%= link_to "Vote Up", event_day_upvote_path(@event, day), class:"btn btn-success upvote"%></td>
+				<td><%= link_to "Vote Down", event_day_downvote_path(@event, day), class:"btn btn-warning downvote"%></td>
+				<td id="<%= day.id %>"><%= day.score %></td>
+			</tr>
+		<% end %>
+	</tbody>
+
+</table>
